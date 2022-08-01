@@ -1,0 +1,159 @@
+.hero {
+  overflow: hidden;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__holder {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: $white;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 40px;
+
+    @include media('>=tablet') {
+      font-size: 28px;
+    }
+
+    @include media('>=desktop') {
+      font-size: 40px;
+      line-height: 44px;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    position: relative;
+    width: 290px;
+    padding: 30px 30px 38px;
+    margin-bottom: -13px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: $white;
+    text-shadow: 0 2px 3px #000;
+    filter: drop-shadow(0px 4px 20px rgba(35, 22, 16, 0.64));
+    background-color: transparent;
+    border: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    cursor: pointer;
+    transition: opacity ease-in-out 0.3s;
+
+    @include media('>=tablet') {
+      width: 329px;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    @include media('>=desktop') {
+      font-size: 44px;
+      margin-bottom: 45px;
+      width: 454px;
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    position: absolute;
+    top: 20px;
+    width: 170px;
+    animation-name: bounce-5;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+
+    @include media('>=tablet') {
+      top: 37px;
+      width: 268px;
+    }
+
+    @include media('>=desktop') {
+      top: 60px;
+      width: 381px;
+    }
+  }
+  @keyframes bounce-5 {
+    0%   { transform: scale(1,1)    translateY(-150%); }
+    24%  { transform: scale(1.1,.9) translateY(25px); }
+    40%  { transform: scale(.9,1.1) translateY(-100px); }
+    50%  { transform: scale(1,1)    translateY(10px); }
+    57%  { transform: scale(1,1)    translateY(-20px); }
+    64%  { transform: scale(1,1)    translateY(3px); }
+    100% { transform: scale(1)    translateY(0); }
+  }
+
+  .img-holder {
+    position: absolute;
+
+    &_eva {
+      bottom: -16px;
+      left: -64px;
+      z-index: 1;
+      width: 288px;
+
+      @include media('>=tablet') {
+        bottom: -11px;
+        left: -31px;
+        width: 320px;
+      }
+
+      @include media('>=desktop') {
+        bottom: -27px;
+        left: 0;
+        width: auto;
+      }
+    }
+
+    &_tiles {
+      bottom: 134px;
+      right: -14px;
+      z-index: 0;
+      width: 215px;
+
+      @include media('>=tablet') {
+        bottom: 117px;
+        right: 7px;
+        width: 303px;
+      }
+
+      @include media('>=desktop') {
+        bottom: 122px;
+        right: 0;
+        width: auto;
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+    min-height: 466px;
+    max-width: 1344px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 56px;
+
+    @include media('>=tablet') {
+      min-height: 502px;
+      padding-bottom: 77px;
+    }
+
+    @include media('>=desktop') {
+      min-height: 706px;
+      padding-bottom: 101px;
+    }
+  }
+}
